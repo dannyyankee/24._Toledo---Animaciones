@@ -1,0 +1,69 @@
+.nav {
+  background: rgba(0, 0, 0, 0.4);
+  /* fondo transparente*/
+  margin-bottom: 15px;
+  border-radius: 3px;
+  
+
+  animation-name: menu;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0.25;
+    margin-left: -800px;
+    transform: skew(0deg, 0deg);
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  30% {
+    opacity: 0.5;
+    transform: skew(40deg, 0deg);
+  }
+
+  50% {
+    transform: skew(-40deg, 0deg);
+    margin-left: 80px;
+    text-shadow: 100px 3px 3px #0c385a;
+    opacity: 0.75;
+  }
+
+  100% {
+    margin-left: 0px;
+    transform: skew(0deg, 0deg);
+    text-shadow: none;
+    opacity: 1;
+  }
+}
+
+.nav__list {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.1rem 0;
+}
+
+.nav__item {
+  padding: 5px;
+}
+
+.nav__link {
+  width: 125px;
+  display: block;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-family: "arial narrow";
+  color: orange;
+  padding: 3px 0px 3px 0px;
+  border-radius: 3px;
+}
+
+.nav__link:hover {
+  background: orange;
+  color: #6d6868;
+}

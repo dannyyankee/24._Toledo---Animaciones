@@ -1,0 +1,130 @@
+@font-face {
+	font-family: "pristina";
+	src: url("../fuentes/pristina.ttf");
+}
+
+body {
+	box-sizing: border-box;
+	background-image: url("../imagenes/vistatoledo1280.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.contenedor {
+	max-width: 980px;
+	margin: 100px auto;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	border-radius: 3px;
+}
+
+/*  para el visor*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.visor {
+	position: relative;
+	background-image: url("../imagenes/panoramica1.jpg");
+	display: flex;
+	justify-content: flex-end;
+	height: 290px;
+	opacity: 0;
+
+	animation-name: visor;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+  	animation-delay: 5s;
+	/* Añade las propiedades de la animación AQUI*/
+}
+
+@keyframes visor {
+	0%{
+		opacity: 0.25;
+		left: 200px;
+	}
+	100%{
+		left: 0px;
+		opacity: 1;
+	}
+/* Añade los fotogramas clave AQUI*/
+
+}
+
+.box {
+	right: 0px;
+	top: 0px;
+	width: 295px;
+	height: 250px;
+	background: black;
+	background-color: rgba(44, 44, 44, 0.5);
+	text-align: justify;
+	padding: 0px 20px;
+	font-size: 1.2em;
+	color: white;
+	font-family: pristina;
+}
+
+.box__title {
+	color: orange;
+	font-family: "arial narrow";
+	font-size: 0.9em;
+	text-align: center;
+	border-bottom: 1px double gray;
+	padding-bottom: 2px;
+	font-variant: small-caps;
+}
+
+.visor__img, .footer__img {
+	height: 100%;
+	width: 100%;
+	border-radius: 3px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Para el pie*/
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 12px;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	opacity: 0;
+
+	animation-name: footer;
+	/* Añade las propiedades de la animación AQUI*/
+	animation-duration: 4s;
+  	animation-fill-mode: forwards;
+	animation-delay: 2.5s;
+
+}
+
+@keyframes footer {
+	/* Añade los fotogramas clave AQUI*/
+	0% {
+		opacity: 0.25;
+		margin-left: -800px;
+		text-shadow: 1px 1px 1px #000;
+	}
+	30% {
+		opacity: 0.5;
+	}
+	50% {
+		margin-left: 80px;
+		text-shadow: 100px 3px 3px #0c385a;
+		opacity: 0.75;
+	}
+	100% {
+		margin-left: 0px;
+		text-shadow: none;
+		opacity: 1;
+	  }
+}
+
+.footer__box-img {
+	width: 133px;
+	height: 70px;
+	margin: 5px 0px;
+	border-radius: 3px;
+}
